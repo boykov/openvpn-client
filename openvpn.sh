@@ -299,6 +299,9 @@ The 'command' (if provided and valid) will be run instead of openvpn
     exit $RC
 }
 
+# cp -f /etc/resolv.override /etc/resolv.conf
+echo "nameserver 8.8.4.4" >> /etc/resolv.conf
+
 dir="/vpn"
 auth="$dir/vpn.auth"
 cert_auth="$dir/vpn.cert_auth"
